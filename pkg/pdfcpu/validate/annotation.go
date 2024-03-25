@@ -17,6 +17,8 @@ limitations under the License.
 package validate
 
 import (
+	"fmt"
+
 	"github.com/pdfcpu/pdfcpu/pkg/log"
 	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
 	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
@@ -1747,8 +1749,12 @@ func validatePageAnnotations(xRefTable *model.XRefTable, d types.Dict) error {
 				continue
 			}
 		} else if xRefTable.ValidationMode != model.ValidationRelaxed {
+			fmt.Println("此处pdf经过 kingkong 改造 , 由于个人业务需求不符合条件需要跳过")
+			continue
 			return errInvalidPageAnnotArray
 		} else if annotsDict, ok = v.(types.Dict); !ok {
+			fmt.Println("此处pdf经过 kingkong 改造 , 由于个人业务需求不符合条件需要跳过")
+			continue
 			return errInvalidPageAnnotArray
 		} else {
 			if log.ValidateEnabled() {
