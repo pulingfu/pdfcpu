@@ -13,3 +13,5 @@ _scripts/*.csv
 
 # GoReleaser
 dist/*
+
+/private
