@@ -201,6 +201,7 @@ func PageCount(rs io.ReadSeeker, conf *model.Configuration) (int, error) {
 
 // PageCountFile returns inFile's page count.
 func PageCountFile(inFile string) (int, error) {
+
 	f, err := os.Open(inFile)
 	if err != nil {
 		return 0, err

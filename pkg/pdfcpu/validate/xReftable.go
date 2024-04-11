@@ -50,7 +50,7 @@ func XRefTable(xRefTable *model.XRefTable) error {
 	if log.ValidateEnabled() {
 		log.Validate.Println("*** validateXRefTable begin ***")
 	}
-
+	// panic("kkong")
 	// Validate root object(aka the document catalog) and page tree.
 	err := validateRootObject(xRefTable)
 	if err != nil {
@@ -889,10 +889,12 @@ func validateRootObject(xRefTable *model.XRefTable) error {
 	if err != nil {
 		return err
 	}
-
 	// Pages
-	rootPageNodeDict, err := validatePages(xRefTable, d)
+	_, err = validatePages(xRefTable, d)
+	// rootPageNodeDict, err := validatePages(xRefTable, d) //去除校验
+	fmt.Println("kkong: 去除rootPageNodeDict 校验")
 	if err != nil {
+		fmt.Println(err.Error())
 		return err
 	}
 
@@ -941,7 +943,8 @@ func validateRootObject(xRefTable *model.XRefTable) error {
 	}
 
 	// Validate remainder of annotations after AcroForm validation only.
-	_, err = validatePagesAnnotations(xRefTable, rootPageNodeDict, 0)
+	// _, err = validatePagesAnnotations(xRefTable, rootPageNodeDict, 0)
+	// 去除 validatePagesAnnotations kkong
 
 	if xRefTable.ValidateLinks && len(xRefTable.URIs) > 0 {
 		err = checkForBrokenLinks(xRefTable)

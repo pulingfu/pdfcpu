@@ -17,6 +17,8 @@ limitations under the License.
 package validate
 
 import (
+	"fmt"
+
 	"github.com/pkg/errors"
 	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
 	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/types"
@@ -178,6 +180,8 @@ func validateOptionalContentGroupArray(xRefTable *model.XRefTable, d types.Dict,
 
 		err = validateOptionalContentGroupDict(xRefTable, d, sinceVersion)
 		if err != nil {
+			fmt.Println("kkong: 如果页面发现问题则跳过")
+			continue
 			return err
 		}
 

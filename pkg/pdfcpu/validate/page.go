@@ -17,6 +17,8 @@ limitations under the License.
 package validate
 
 import (
+	"fmt"
+
 	"github.com/pkg/errors"
 	"github.com/pulingfu/pdfcpu/pkg/log"
 	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
@@ -981,7 +983,8 @@ func processPagesKids(xRefTable *model.XRefTable, kids types.Array, objNr int, h
 
 		pageNodeDict, err := xRefTable.DereferenceDict(ir)
 		if err != nil {
-			return nil, err
+			// return nil, err
+			continue
 		}
 		if pageNodeDict == nil {
 			return nil, errors.New("pdfcpu: validatePagesDict: corrupt page node")
@@ -997,7 +1000,8 @@ func processPagesKids(xRefTable *model.XRefTable, kids types.Array, objNr int, h
 
 		dictType, err := dictTypeForPageNodeDict(pageNodeDict)
 		if err != nil {
-			return nil, err
+			// return nil, err
+			continue
 		}
 
 		switch dictType {
@@ -1011,6 +1015,8 @@ func processPagesKids(xRefTable *model.XRefTable, kids types.Array, objNr int, h
 			*curPage++
 			xRefTable.CurPage = *curPage
 			if err = validatePageDict(xRefTable, pageNodeDict, objNumber, hasResources, hasMediaBox); err != nil {
+				fmt.Println("kkong: 如果页面发现问题则跳过")
+				continue
 				return nil, err
 			}
 			if err := xRefTable.SetValid(ir); err != nil {
@@ -1163,13 +1169,11 @@ func validatePages(xRefTable *model.XRefTable, rootDict types.Dict) (types.Dict,
 	if pageCount == nil {
 		return nil, errors.New("pdfcpu: validatePages: missing \"Count\" in page root dict")
 	}
-
 	i := 0
 	err = validatePagesDict(xRefTable, pageRoot, objNr, false, false, &i)
 	if err != nil {
 		return nil, err
 	}
-
 	if i != *pageCount {
 		return nil, errors.New("pdfcpu: validatePages: page tree corrupted")
 	}

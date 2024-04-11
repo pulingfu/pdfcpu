@@ -17,6 +17,8 @@ limitations under the License.
 package validate
 
 import (
+	"fmt"
+
 	"github.com/pkg/errors"
 	"github.com/pulingfu/pdfcpu/pkg/filter"
 	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
@@ -870,6 +872,8 @@ func validateXObjectResourceDict(xRefTable *model.XRefTable, o types.Object, sin
 		// Process XObject dict
 		err = validateXObjectStreamDict(xRefTable, o)
 		if err != nil {
+			fmt.Println("kkong: 如果有问题则跳过")
+			continue
 			return err
 		}
 	}

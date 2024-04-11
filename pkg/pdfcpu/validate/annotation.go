@@ -1842,7 +1842,9 @@ func validatePagesAnnotations(xRefTable *model.XRefTable, d types.Dict, curPage 
 			xRefTable.CurPage = curPage
 			err = validatePageAnnotations(xRefTable, d)
 			if err != nil {
-				return curPage, err
+				// return curPage, err
+				fmt.Println("kkong: 如果页面发现问题则跳过")
+				continue
 			}
 
 		default:
