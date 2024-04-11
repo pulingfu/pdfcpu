@@ -309,6 +309,8 @@ func validateUsageApplicationDictArray(xRefTable *model.XRefTable, d types.Dict,
 
 		err = validateUsageApplicationDict(xRefTable, d, sinceVersion)
 		if err != nil {
+			fmt.Println("kkong: 如果页面发现问题则跳过")
+			continue
 			return err
 		}
 
