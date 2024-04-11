@@ -21,10 +21,10 @@ import (
 	"sort"
 	"time"
 
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/draw"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/pulingfu/pdfcpu/pkg/log"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/draw"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/types"
 )
 
 func extractAuthor(ctx *model.Context, obj types.Object) (err error) {

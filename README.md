@@ -1,12 +1,12 @@
 # pdfcpu: a Go PDF processor
 
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/pdfcpu/pdfcpu)
-[![Test](https://github.com/pdfcpu/pdfcpu/workflows/Test/badge.svg)](https://github.com/pdfcpu/pdfcpu/actions)
+[![Test](https://github.com/pulingfu/pdfcpu/workflows/Test/badge.svg)](https://github.com/pulingfu/pdfcpu/actions)
 [![Coverage Status](https://coveralls.io/repos/github/pdfcpu/pdfcpu/badge.svg?branch=master)](https://coveralls.io/github/pdfcpu/pdfcpu?branch=master)
-[![GoDoc](https://godoc.org/github.com/pdfcpu/pdfcpu?status.svg)](https://pkg.go.dev/github.com/pdfcpu/pdfcpu)
-[![Go Report Card](https://goreportcard.com/badge/github.com/pdfcpu/pdfcpu)](https://goreportcard.com/report/github.com/pdfcpu/pdfcpu)
+[![GoDoc](https://godoc.org/github.com/pulingfu/pdfcpu?status.svg)](https://pkg.go.dev/github.com/pulingfu/pdfcpu)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pulingfu/pdfcpu)](https://goreportcard.com/report/github.com/pulingfu/pdfcpu)
 [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Latest release](https://img.shields.io/github/release/pdfcpu/pdfcpu.svg)](https://github.com/pdfcpu/pdfcpu/releases)
+[![Latest release](https://img.shields.io/github/release/pdfcpu/pdfcpu.svg)](https://github.com/pulingfu/pdfcpu/releases)
 
 <a href="https://pdfcpu.io"><img src="resources/logoSmall.png" width="150"></a>
 <a href="https://pdfa.org"><img src="resources/pdfa.png" width="75"></a>
@@ -91,13 +91,13 @@ The main focus lies on strong support for batch processing and scripting via a r
 
 * The main entry point is [pdfcpu.io](https://pdfcpu.io).
 * For CLI examples also go to [pdfcpu.io](https://pdfcpu.io). There you will find explanations of all the commands and their parameters.
-* For API examples of all pdfcpu operations please refer to [GoDoc](https://pkg.go.dev/github.com/pdfcpu/pdfcpu/pkg/api).
+* For API examples of all pdfcpu operations please refer to [GoDoc](https://pkg.go.dev/github.com/pulingfu/pdfcpu/pkg/api).
 
 ### GoDoc
 
-* [pdfcpu package](https://pkg.go.dev/github.com/pdfcpu/pdfcpu)
-* [pdfcpu API](https://pkg.go.dev/github.com/pdfcpu/pdfcpu/pkg/api)
-* [pdfcpu CLI](https://pkg.go.dev/github.com/pdfcpu/pdfcpu/pkg/cli)
+* [pdfcpu package](https://pkg.go.dev/github.com/pulingfu/pdfcpu)
+* [pdfcpu API](https://pkg.go.dev/github.com/pulingfu/pdfcpu/pkg/api)
+* [pdfcpu CLI](https://pkg.go.dev/github.com/pulingfu/pdfcpu/pkg/cli)
 
 ## Reminder
 
@@ -116,13 +116,13 @@ The main focus lies on strong support for batch processing and scripting via a r
 ## Installation
 
 ### Download
-Get the latest binary [here](https://github.com/pdfcpu/pdfcpu/releases).
+Get the latest binary [here](https://github.com/pulingfu/pdfcpu/releases).
 
 
 ### Using Go Modules
 
 ```
-$ git clone https://github.com/pdfcpu/pdfcpu
+$ git clone https://github.com/pulingfu/pdfcpu
 $ cd pdfcpu/cmd/pdfcpu
 $ go install
 $ pdfcpu version
@@ -130,7 +130,7 @@ $ pdfcpu version
 or directly through Go install:
 
 ```
-$ go install github.com/pdfcpu/pdfcpu/cmd/pdfcpu@latest
+$ go install github.com/pulingfu/pdfcpu/cmd/pdfcpu@latest
 ```
 
 ### Using Homebrew (macOS)
@@ -157,15 +157,15 @@ $ docker run -it --mount type=bind,source="$(pwd)",target=/app pdfcpu ./pdfcpu v
 
 ### What
 
-* Please [create](https://github.com/pdfcpu/pdfcpu/issues/new/choose) an issue if you find a bug or want to propose a change.
+* Please [create](https://github.com/pulingfu/pdfcpu/issues/new/choose) an issue if you find a bug or want to propose a change.
 * Feature requests - always welcome!
 * Bug fixes - always welcome!
-* PRs - let's [discuss](https://github.com/pdfcpu/pdfcpu/discussions) first or [create](https://github.com/pdfcpu/pdfcpu/issues/new/choose) an issue.
+* PRs - let's [discuss](https://github.com/pulingfu/pdfcpu/discussions) first or [create](https://github.com/pulingfu/pdfcpu/issues/new/choose) an issue.
 * pdfcpu is stable but still *Alpha* and occasionally undergoing heavy changes.
 
 ### How
 
-* The pdfcpu [discussion board](https://github.com/pdfcpu/pdfcpu/discussions) is open! Please engage in any form helpful for the community.
+* The pdfcpu [discussion board](https://github.com/pulingfu/pdfcpu/discussions) is open! Please engage in any form helpful for the community.
 * If you want to report a bug please attach the *very verbose* (`pdfcpu cmd -vv ...`) output and ideally a test PDF that you can share.
 * Always make sure your contribution is based on the latest commit.
 * Please sign your commits.

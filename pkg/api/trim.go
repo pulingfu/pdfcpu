@@ -21,10 +21,10 @@ import (
 	"os"
 	"sort"
 
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
 	"github.com/pkg/errors"
+	"github.com/pulingfu/pdfcpu/pkg/log"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
 )
 
 // Trim generates a trimmed version of rs

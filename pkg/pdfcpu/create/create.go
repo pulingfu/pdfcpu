@@ -23,12 +23,12 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/pdfcpu/pdfcpu/pkg/font"
-	pdffont "github.com/pdfcpu/pdfcpu/pkg/pdfcpu/font"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/primitives"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
 	"github.com/pkg/errors"
+	"github.com/pulingfu/pdfcpu/pkg/font"
+	pdffont "github.com/pulingfu/pdfcpu/pkg/pdfcpu/font"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/primitives"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/types"
 )
 
 func ensureFontIndRef(xRefTable *model.XRefTable, fontName string, frPage model.FontResource, fonts model.FontMap) (*types.IndirectRef, error) {

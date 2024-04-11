@@ -20,9 +20,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
 	"github.com/pkg/errors"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/types"
 )
 
 // PageLayout returns rs's page layout.

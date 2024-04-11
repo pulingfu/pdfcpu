@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/color"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/color"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/types"
 )
 
 // AnnotationFlags represents the PDF annotation flags.

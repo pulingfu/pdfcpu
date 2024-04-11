@@ -20,9 +20,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
 	"github.com/pkg/errors"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu"
+	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
 )
 
 // Keywords returns the keywords of rs's info dict.

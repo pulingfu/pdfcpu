@@ -67,7 +67,7 @@
 		},
 		"logo2": {
 			"src": "$logo2",
-			"url": "https://github.com/pdfcpu/pdfcpu",
+			"url": "https://github.com/pulingfu/pdfcpu",
 			"margin": {
 				"width": 5
 			}

@@ -21,8 +21,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/pdfcpu/pdfcpu/pkg/log"
 	"github.com/pkg/errors"
+	"github.com/pulingfu/pdfcpu/pkg/log"
 )
 
 // PDF defines the following filters. See also 7.4 in the PDF spec.
