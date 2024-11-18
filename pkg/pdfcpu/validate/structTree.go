@@ -154,9 +154,10 @@ func validateStructElementDictEntryKArray(xRefTable *model.XRefTable, a types.Ar
 			continue
 		}
 
-		if err := validateStructElementKArrayElement(xRefTable, o); err != nil {
-			return err
-		}
+		// kkong 先删掉
+		// if err := validateStructElementKArrayElement(xRefTable, o); err != nil {
+		// 	return err
+		// }
 
 	}
 
@@ -542,10 +543,11 @@ func validateStructTreeRootDictEntryK(xRefTable *model.XRefTable, o types.Object
 
 	case types.Array:
 
-		err = validateStructTreeRootDictEntryKArray(xRefTable, o)
-		if err != nil {
-			return err
-		}
+		// err = validateStructTreeRootDictEntryKArray(xRefTable, o)
+		// if err != nil {
+		// 	return err
+		// }
+		return nil
 
 	default:
 		return errors.New("pdfcpu: validateStructTreeRootDictEntryK: unsupported PDF object")

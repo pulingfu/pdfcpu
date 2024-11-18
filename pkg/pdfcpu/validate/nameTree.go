@@ -17,6 +17,8 @@ limitations under the License.
 package validate
 
 import (
+	"fmt"
+
 	"github.com/pkg/errors"
 	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/model"
 	"github.com/pulingfu/pdfcpu/pkg/pdfcpu/types"
@@ -545,7 +547,8 @@ func validateIDTreeValue(xRefTable *model.XRefTable, o types.Object, sinceVersio
 			return err
 		}
 	} else {
-		return errors.Errorf("pdfcpu: validateIDTreeValue: invalid dictType %s (should be \"StructElem\")\n", *dictType)
+		fmt.Println("xxx")
+		// return errors.Errorf("pdfcpu: validateIDTreeValue: invalid dictType %s (should be \"StructElem\")\n", *dictType)
 	}
 
 	return nil

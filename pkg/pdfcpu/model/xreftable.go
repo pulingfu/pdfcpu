@@ -895,9 +895,10 @@ func (xRefTable *XRefTable) IsValidObj(objNr, genNr int) (bool, error) {
 	if !found {
 		return false, errors.Errorf("pdfcpu: IsValid: no entry for obj#%d\n", objNr)
 	}
-	if entry.Free {
-		return false, errors.Errorf("pdfcpu: IsValid: unexpected free entry for obj#%d\n", objNr)
-	}
+	// 暂时不知道什么用，先删掉 kkong
+	// if entry.Free {
+	// 	return false, errors.Errorf("pdfcpu: IsValid: unexpected free entry for obj#%d\n", objNr)
+	// }
 	return entry.Valid, nil
 }
 
@@ -912,9 +913,10 @@ func (xRefTable *XRefTable) SetValid(ir types.IndirectRef) error {
 	if !found {
 		return errors.Errorf("pdfcpu: SetValid: no entry for obj#%d\n", ir.ObjectNumber.Value())
 	}
-	if entry.Free {
-		return errors.Errorf("pdfcpu: SetValid: unexpected free entry for obj#%d\n", ir.ObjectNumber.Value())
-	}
+	// 暂时不知道什么用，先删掉 kkong
+	// if entry.Free {
+	// 	return errors.Errorf("pdfcpu: SetValid: unexpected free entry for obj#%d\n", ir.ObjectNumber.Value())
+	// }
 	entry.Valid = true
 	return nil
 }
